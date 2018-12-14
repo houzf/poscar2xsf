@@ -69,9 +69,6 @@ addOption --vasp /home/z-hou/bin/pos2xsf.sh {
 addOption --outcar /home/z-hou/bin/voutcar2xsf.sh {
                     load structure from vasp file format
                   }
-addOption --cif /home/z-hou/bin/cif2xsf.sh {
-                    load structure from cif file format
-                  }
 ##
 
 
