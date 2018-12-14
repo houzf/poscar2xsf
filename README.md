@@ -4,7 +4,9 @@ Requirment: bc and awk commands are available on the Linux or Mac OS.
 
 pos2xsf.sh: a bash script file that can convert a POSCAR-format-like file to a XSF-format like file.
 
-Usage:   chmod +x pos2xsf.sh
+Usage:   
+
+          chmod +x pos2xsf.sh
 
           pos2xsf.sh    POSCAR  >POSCAR.xsf
 # voutcar2xsf
@@ -12,7 +14,9 @@ Requirment: bc and awk commands are available on the Linux or Mac OS.
 
 voutcar2xsf.sh:  a bash script file that can extract the last structure configuration from the OUTCAR file.
 
-Usage: chmod +x voutcar2xsf.sh
+Usage: 
+       
+       chmod +x voutcar2xsf.sh
 
        voutcar2xsf.sh   OUTCAR   >OUTCAR.xsf
  
@@ -24,20 +28,22 @@ Usage: chmod +x voutcar2xsf.sh
 3. put "voutcar2xsf.sh" and "pos2xsf.sh" into the "$HOME/bin" directory;
 
 4. add the following example lines ("your_username" should be replaced by your actual username.) into the "custom-definitions" file, :
- addOption --vasp /home/your_username/bin/pos2xsf.sh {
+
+
+           addOption --vasp /home/your_username/bin/pos2xsf.sh {
                  load structure from vasp file format
                   }
                   
- addOption --outcar /home/your_username/bin/voutcar2xsf.sh {
+           addOption --outcar /home/your_username/bin/voutcar2xsf.sh {
                     load structure from vasp file format
                   }
   5. To directly visualize the POSCAR-format-like file or OUTCAR-format-like file via XCrySDen, one can run the following command:
   
-  xcrysden --vasp    POSCAR
+          xcrysden --vasp    POSCAR
   
   or
   
-  xcrysden --outcar   OUTCAR
+          xcrysden --outcar   OUTCAR
   
 
 
