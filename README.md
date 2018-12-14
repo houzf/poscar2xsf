@@ -1,5 +1,5 @@
 
-# poscar2xsf
+# pos2xsf
 Requirment: bc and awk commands are available on the Linux or Mac OS. 
 
 pos2xsf.sh: a bash script file that can convert a POSCAR-format-like file to a XSF-format like file.
@@ -20,7 +20,7 @@ Usage:
 
        voutcar2xsf.sh   OUTCAR   >OUTCAR.xsf
  
-# combine poscar2xsf.sh / voutcar2xsf.sh with XCrySDen
+# combine pos2xsf.sh / voutcar2xsf.sh with XCrySDen
 1. check the directory "$HOME/.xcrysden/" is available or not; if not, run command: mkdir $HOME/.xcrysden/;
 
 2. check the "custom-definitions" and  "Xcrysden_defaults" files are available in the directory "$HOME/.xcrysden/" or not; if not, download the files of "custom-definitions" and "Xcrysden_defaults" from here and then put them into "$HOME/.xcrysden/";
