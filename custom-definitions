@@ -1,0 +1,194 @@
+
+# ------------------------------------------------------------------------
+# Custom setting of the atomic radii. The syntax is:
+#
+# set atmRad(atomic_number) radius
+#
+# Example:
+#
+# set atmRad(1) 0.5; # custom radius for Hydrogen
+# set atmRad(8) 1.2; # custom radius for Oxygen
+# ------------------------------------------------------------------------
+
+#set atmRad(1) 0.5
+
+
+
+# ------------------------------------------------------------------------
+# Custom setting of the atomic colors. The syntax is:
+#
+# set atmCol(atomic_number) {red gren blue}
+#
+# The components (red,gren,blue) must be in range [0,1]
+#
+# Example:
+#
+# set atmCol(1) {0.5 0.5 0.5}; # custom color for Hydrogen
+# set atmRad(8) {0.0 1.0 0.0}; # custom color for Oxygen
+# ------------------------------------------------------------------------
+
+set atmCol(1) {0.5 0.5 0.5}
+
+
+
+#
+## ------------------------------------------------------------------------
+##  Here go custom user-specified options
+## ------------------------------------------------------------------------
+##  In order to add an --unknown option (i.e "unknown" stands for new
+##  format to add) to the XCRYSDEN allowed options, do the following:
+##  
+## Usage: 
+##       addOption option converterProgram description
+##
+## Arguments:
+##       option           ... option to add to XCRYSDEN options
+##
+##       converterProgram ... program that converts from an "unknown"
+##                            to XSF format; this program must be
+##                            supplied by the user !!!
+##
+##       description      ... description of the options that will
+##                            appear in the help message 
+##                            (i.e. xcrysden --help).
+##
+## Example: (suppose the format is "myformat")
+##
+##       addOption --myformat $env(HOME)/utils/myformat2xsf {
+##               load structure from myformat file format
+##       }
+##
+## Example Note: the converting program is myformat2xsf, and
+##               /path/to/myformat2xsf is the full pathname for the
+##               converting program.
+#
+#addOption --vasp /home/z-hou/bin/v2xsf {
+addOption --vasp /home/z-hou/bin/pos2xsf.sh {
+                    load structure from vasp file format
+                  }
+addOption --outcar /home/z-hou/bin/voutcar2xsf.sh {
+                    load structure from vasp file format
+                  }
+addOption --cif /home/z-hou/bin/cif2xsf.sh {
+                    load structure from cif file format
+                  }
+##
+
+
+# -------------------------------------------------------------------------
+ # Custom setting for a variety of molecular display parameters, such as
+ # # ball-factors, specefill scale factors, tessellation factors, etc.
+ # #
+ # # Below are the default values. If you would like to change the
+ # # default for a particular parameter, then uncomment the appropriate
+ # # line and set the value according to your needs.
+ # # ------------------------------------------------------------------------
+ #
+ # ## spacefill scale factor
+ # #set myParam(ATRAD_SCALE)     1.40
+ # #
+ # ## tesselation factor
+ # #set myParam(TESSELLATION)    15.0 
+ # #
+ # ## RGB color of unibonds (each compoenent must be within [0,1])
+ # #set myParam(UNIBONDCOLOR)    {1.00 1.00 1.00} 
+ # #
+ # ## Perspective Fovy, Front and Back parameters. The smaller the Fovy
+ # ## the larger the perception of perspective. Front and Back parameters
+ # ## determine the front and back clipping planes. The smaller the Back
+ # ## parameter the more the structure is clipped from the back side. The
+ # ## Front parameter is counter-intuitive, meaning the smaller it is the
+ # ## more the structure is clipped from the front side.
+ # #
+ # #set myParam(PERSPECTIVEFOVY)  2.5
+ # #set myParam(PERSPECTIVEFRONT) 0.65
+ # #set myParam(PERSPECTIVEBACK)  3.0
+ # #
+ # ## ball-factor
+ # #set myParam(BALLF)           0.29
+ # #
+ # ## rod-factor
+ # #set myParam(RODF)            0.6
+ # #
+ # ## line-width of wireframe display-mode (in pixels)
+ # #set myParam(WFLINEWIDTH)     1
+ # #
+ # ## line-width of pointline display-mode (in pixels)
+ # #set myParam(PLLINEWIDTH)     1
+ # #
+ # ## line-width of crystal cell's frames
+ set myParam(FRAMELINEWIDTH)  3
+ # #
+ # ## Lighting-Off outline width
+set myParam(OUTLINEWIDTH)     1
+ # #
+ # ## Lighting-On wire line width
+ # #set myParam(WF3DLINEWIDTH)    1
+ # #
+ # ## point-size of pointline display-mode (in pixels)
+ # #set myParam(PLRADIUS)        6
+ # #
+ # ## chemical connectivity factor
+ # #set myParam(COV_SCALE)       1.05
+ # #
+ # ## RGB color of crystal frame (each compoenent must be within [0,1])
+set myParam(FRAMECOL)        {0.00 0.00 0.00} 
+ # #
+ # ## line-width of crystal frame
+ # #set myParam(FRAMELINEWIDTH)  1 
+ # #
+ # ## rod-factor of crystal frame
+ # #set myParam(FRAMERODF)       0.1
+ # #
+ # ## RGB background of XCRYSDEN display window 
+ # ## (each compoenent must be within [0,1])
+set myParam(BACKGROUND)      {1.00 1.00 1.00}
+ # #
+ # ## maximum number of cells per direction for CRYSTALs
+ # #set myParam(CRYSTAL_MAXCELL)  10
+ # #
+ # ## maximum number of cells per direction for SLABs
+ # #set myParam(SLAB_MAXCELL)     20
+ # #
+ # ## maximum number of cells for POLYMERs
+ # #set myParam(POLYMER_MAXCELL)  50
+ # #
+ # ## default atomic-label font (in X11 XLFD format)
+ # #set myParam(ATOMIC_LABEL_FONT) \
+ # #            -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+ # #
+ # # default atomic-label bright and dark color (in clamped-float RGB format)
+ # #set myParam(ATOMIC_LABEL_BRIGHTCOLOR) {1.0 1.0 1.0}
+ # #set myParam(ATOMIC_LABEL_DARKCOLOR)   {0.0 0.0 0.0}
+ # #
+ # #
+ # ## this are the parameters for the \"mpeg_encode\" program:
+ # ##--BEGIN::
+ # #set myParam(MPEG_ENCODE_PARAM_FILE) {
+ # #PATTERN          IBBPBBPBBPBBPBBP
+ # #OUTPUT           \$output_file
+ # #BASE_FILE_FORMAT PPM
+ # #INPUT_FORMAT     UCB
+ # #\$input_convert
+ # #GOP_SIZE         16
+ # #SLICES_PER_FRAME 1
+ # #INPUT_DIR        \$input_dir
+ # #INPUT
+ # #\$input_files
+ # #END_INPUT
+ # #PIXEL           FULL
+ # #RANGE           10
+ # #PSEARCH_ALG     LOGARITHMIC
+ # #BSEARCH_ALG     CROSS2
+ # #IQSCALE         8
+ # #PQSCALE         10
+ # #BQSCALE         25
+ # #REFERENCE_FRAME ORIGINAL
+ # #BIT_RATE        1000000
+ # #BUFFER_SIZE     327680
+ # #FRAME_RATE      30
+ # #}
+ # ##--END
+ # #
+ # # ------------------------------------------------------------------------
+ #

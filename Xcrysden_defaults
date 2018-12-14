@@ -1,0 +1,81 @@
+# ------------------------------------------------------------------------
+# if you have problems with fonts see the end of this file
+# ------------------------------------------------------------------------
+
+# ----------------------------
+# here you can set palette
+# ----------------------------
+#*palette: #777
+
+
+#---------------
+# MenuBar 
+#---------------
+
+*MenuBar.relief:                    raised
+*MenuBar.borderWidth:               2
+*MenuBar*activeBackground:          #007d8d
+*MenuBar*activeForeground:          #ffffff
+
+*Viewer*activeBackground:           #007d8d
+*Viewer*activeForeground:           #ffffff
+
+
+
+# ----------------------------
+# this is STANDARD !!!
+# ----------------------------
+
+*Button.font:     -*-helvetica-medium-r-normal-*-14-*-*-*-*-*-*-
+*Menubutton.font: -*-helvetica-bold-r-normal-*-14-*-*-*-*-*-*-
+
+*Entry.background:              #daa
+*SilentEntry*Entry.background:  #ddd
+*Text.background:               #daa
+*Listbox.background:            #daa
+
+*RaisedFrame.relief:            raised
+*RaisedFrame.borderWidth:       2
+*GrooveFrame.relief:            groove
+*GrooveFrame.borderWidth:       2
+
+
+
+# ------------------------------------------------------------------------
+# stressed color
+# ------------------------------------------------------------------------
+
+*ctrl*Button.background:               #b5a266
+*ctrl*Button.foreground:               #000000
+*ctrl*Button.highlightBackground:      #000
+*close*Button.background:              #b5a266
+*close*Button.highlightBackground:     #000
+*close*Button.foreground:              #000000
+
+*StressText*Message.background:        #b5a266
+*StressText*Label.background:          #b5a266
+*Fileselect*Message.background:        #b5a266
+
+
+
+# ------------------------------------------------------------------------
+# datagrid widgets
+# ------------------------------------------------------------------------
+
+*DataGridBlock*Frame.background:       #ffce61
+*DataGridBlock*Label.background:       #ffce61
+*DataGridBlock*Radiobutton.background: #ffce61
+
+*DataGridSubBlock*Frame.background:        #ffff9d
+*DataGridSubBlock*Label.background:        #ffff9d
+*DataGridSubBlock*Entry.background:        #daa
+*DataGridSubBlock*Checkbutton.background:  #99ddaa
+*DataGridSubBlock*Checkbutton.selectColor: #000099
+
+
+
+# ------------------------------------------------------------
+# if you have problems with fonts uncomment the line below
+# ------------------------------------------------------------
+#*font:fixed
+#
