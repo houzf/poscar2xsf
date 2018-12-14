@@ -1,4 +1,5 @@
 #!/bin/bash
+## written by Zhufeng HOU, Dec 14,2018
 fpos='POSCAR'
 if [ $# -ne 1 ]; then
     echo "Command line shall contain 1 arguments."
