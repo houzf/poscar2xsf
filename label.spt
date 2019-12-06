@@ -1,0 +1,14 @@
+label %i
+set labelalignment center; set labeloffset 0 0;
+#color label yellow
+color label yellow
+font label 13  serif bold
+set vectorScale 5.0
+set vectorsCentered
+set vectorSymmetry FALSE
+set vibrationPeriod  2.0
+set vibrationScale  2.0
+set defaults PyMOL
+vector ON
+vector 0.05
+vibration ON
