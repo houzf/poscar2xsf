@@ -1,4 +1,4 @@
-This repo is forked from houzf/poscar2xsf original repo.
+This repo is forked from <https://github.com/houzf/poscar2xsf>
 
 # pos2xsf
 Requirment: bc and awk commands are available on the Linux or Mac OS. 
