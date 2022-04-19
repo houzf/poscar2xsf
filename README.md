@@ -21,6 +21,18 @@ Usage:
 
        voutcar2xsf.sh   OUTCAR   >OUTCAR.xsf
  
+# voutcar2xsf_ani
+Requirment: bc and awk commands are available on the Linux or Mac OS. 
+
+voutcar2xsf.sh:  a bash script file that can extract different structure configurations from the OUTCAR file.
+
+Usage: 
+       
+       chmod +x voutcar2xsf_ani.sh
+
+       voutcar2xsf_ani.sh   OUTCAR   >OUTCAR_ani.xsf
+
+ 
 # combine pos2xsf.sh / voutcar2xsf.sh with XCrySDen
 1. check the directory "$HOME/.xcrysden/" is available or not; if not, run command: mkdir $HOME/.xcrysden/;
 
