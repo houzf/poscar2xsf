@@ -48,7 +48,7 @@ else
             fx=`sed -n  "${pline}p"   $fout |awk '{printf "%15.5f\n", $4}'`
             fy=`sed -n  "${pline}p"   $fout |awk '{printf "%15.5f\n", $5}'`
             fz=`sed -n  "${pline}p"   $fout |awk '{printf "%15.5f\n", $6}'`
-            echo  ${elemptype[$index]}  $cx  $cy  $cz  $fx $fy  $z \
+            echo  ${elemptype[$index]}  $cx  $cy  $cz  $fx $fy  $fz \
               |awk '{printf "%5s %15.5f %15.5f %15.5f  %15.5f %15.5f %15.5f\n", $1, $2, $3, $4, $5, $6, $7}'
         done
     done
