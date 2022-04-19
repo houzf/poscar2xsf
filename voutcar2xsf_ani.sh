@@ -1,5 +1,5 @@
 #!/bin/bash
-## written by Zhufeng HOU, Dec 14,2018
+## written by Jiahao Fan, Apr 19,2022
 fout='OUTCAR'
 if [ $# -ne 1 ]; then
     echo "Command line shall contain 1 arguments."
