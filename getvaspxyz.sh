@@ -23,7 +23,7 @@ for  it in `seq 0  $((${ntp}-1))`;do
 done
 done
 
-cp opt.xyz   opt-"$pwd1".xyz
+#cp opt.xyz   opt-"$pwd1".xyz
   
 nstep=(`sed -n '/total drift:/=' OUTCAR `)
 etot=(`grep 'energy  without entropy=' OUTCAR |awk '{printf "%20.8f\n", $4}' `)
@@ -57,4 +57,4 @@ done
 done
 done
 echo "The atomic positions in each optimization step are written to trajec.xyz!"
-cp  trajec.xyz   trajec-"$pwd1".xyz
+#cp  trajec.xyz   trajec-"$pwd1".xyz
